@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>{{ 'title.bookmark'|trans }}</h1>
+
+    {% if bookmarks is defined and bookmarks|length %}
+        <p>{{ 'label.id'|trans  }}: {{ bookmark.index0 }} </p>
+        <p>{{ 'label.url'|trans }}: {{ bookmark.url }} </p>
+
+    {% else %}
+        <p>
+            {{ 'message.empty_list'|trans }}
+        </p>
+    {% endif %}
+
+{% endblock %}
+
+

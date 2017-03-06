@@ -39,4 +39,25 @@ class BookmarkController extends Controller
         );
     }
 
+    /**
+     * View action.
+     *
+     * @return \Symfony\Component\HttpFoundation\Response Response
+     *
+     * @Route(
+     *     "/{id}",
+     *     name="bookmark_view"
+     * )
+     */
+    public function viewAction($id)
+    {
+        $bookmarkRepository = new BookmarkRepository();
+        $bookmarks = $bookmarkRepository->findOneById($id);
+
+        return $this->render(
+            'bookmark/view.html.twig',
+            ['bookmarks' => $bookmarks]
+        );
+    }
+
 }

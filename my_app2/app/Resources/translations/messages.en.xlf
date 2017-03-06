@@ -10,6 +10,10 @@
                 <source>title.bookmarks</source>
                 <target>Tytuły zakładek</target>
             </trans-unit>
+            <trans-unit id="title.bookmark">
+                <source>title.bookmark</source>
+                <target>Tytuł zakładki</target>
+            </trans-unit>
             <trans-unit id="label.id">
                 <source>label.id</source>
                 <target>Id</target>
