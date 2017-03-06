@@ -1,3 +1,4 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+#zasoby w nazwie bundla i podkatalogu beda obslugiwane sciezki za pomoca mechanizmu adnotacji

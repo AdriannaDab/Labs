@@ -14,14 +14,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
  *
  * @package AppBundle\Controller
  *
- * @Route("/bookmark")
+ * @Route("/bookmark") # wszystkie a potem doprecyzuje
  */
-class BookmarkController extends Controller
+class BookmarkController extends Controller #rozszerza bazowy kontroler
 {
     /**
      * Index action.
      *
-     * @return \Symfony\Component\HttpFoundation\Response Response
+     * @return \Symfony\Component\HttpFoundation\Response HTTP Response
      *
      * @Route(
      *     "/",
@@ -52,11 +52,13 @@ class BookmarkController extends Controller
     public function viewAction($id)
     {
         $bookmarkRepository = new BookmarkRepository();
-        $bookmarks = $bookmarkRepository->findOneById($id);
+        $bookmark = $bookmarkRepository->findOneById($id);
 
         return $this->render(
             'bookmark/view.html.twig',
-            ['bookmarks' => $bookmarks]
+            ['bookmark' => $bookmark,
+            'id' => $id
+        ]
         );
     }
 

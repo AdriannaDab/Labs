@@ -4,9 +4,13 @@
 
     <h1>{{ 'title.bookmark'|trans }}</h1>
 
-    {% if bookmarks is defined and bookmarks|length %}
-        <p>{{ 'label.id'|trans  }}: {{ bookmark.index0 }} </p>
+    {% if bookmark is defined and bookmark|length %}
+
+        <p>{{ 'label.id'|trans  }}: {{ id }} </p>
         <p>{{ 'label.url'|trans }}: {{ bookmark.url }} </p>
+        {% for tag in bookmark.tags %}
+            <dd>{{ tag }}</dd>
+        {% endfor %}
 
     {% else %}
         <p>

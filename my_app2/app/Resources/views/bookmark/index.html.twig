@@ -9,9 +9,12 @@
         {% for bookmark in bookmarks %}
             <dl>
                 <dt>{{ 'label.id'|trans }}</dt>
-                <dd>{{ loop.index0 }}</dd>
+                <dd>{{ loop.index0 }}</dd> {#kolejny ele. liczony od zera#}
                 <dt>{{ 'label.url'|trans }}</dt>
                 <dd>{{ bookmark.url }}</dd>
+            {% for tag in bookmark.tags %}
+                <dd>{{ tag }}</dd>
+            {% endfor %}
             </dl>
         {% endfor %}
 
