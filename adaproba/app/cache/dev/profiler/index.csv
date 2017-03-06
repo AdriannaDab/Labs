@@ -1,0 +1,3 @@
+2cf12e,127.0.0.1,GET,http://localhost:8000/,1488796342,,200
+b83f44,127.0.0.1,GET,http://localhost:8000/bookmark,1488796351,,301
+5300fb,127.0.0.1,GET,http://localhost:8000/bookmark/,1488796351,,200
