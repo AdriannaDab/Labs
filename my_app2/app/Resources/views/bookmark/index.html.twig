@@ -20,7 +20,7 @@
                 <dd>{{ bookmark.url }}</dd>
                 <dt>{{ 'tags'|trans }}</dt>
             {% for tag in bookmark.tags %}
-                <dd>{{ tag }}</dd>
+                <dd>{{ tag|comma }}</dd>
             {% endfor %}
             </dl>
         {% endfor %}
